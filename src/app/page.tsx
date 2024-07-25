@@ -1,7 +1,9 @@
+import MainPage from '@/components/MainPage/MainPage';
+
 const Home = () => {
   return (
     <main>
-      <section className="flex h-full items-center justify-center">Welcom Tarot Space</section>
+      <MainPage />
     </main>
   );
 };
