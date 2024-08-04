@@ -2,7 +2,7 @@ import MainPage from '@/components/MainPage';
 
 const Home = () => {
   return (
-    <main>
+    <main className="h-full">
       <MainPage />
     </main>
   );

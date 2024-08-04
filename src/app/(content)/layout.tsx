@@ -4,10 +4,10 @@ import Navigation from '@/components/Navigation';
 
 const ContentLayout = ({ children }: PropsWithChildren) => {
   return (
-    <>
+    <main className="h-full">
       <Navigation />
-      <main>{children}</main>
-    </>
+      <section>{children}</section>
+    </main>
   );
 };
 
