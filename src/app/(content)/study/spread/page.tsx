@@ -3,20 +3,8 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-interface SpreadType {
-  title: string;
-  description: string;
-  image: string;
-}
-
-type SpreadsType = {
-  oneCard: SpreadType;
-  threeCard: SpreadType;
-  celticCross: SpreadType;
-  treeOfLife: SpreadType;
-  horseshoe: SpreadType;
-  fullMoon: SpreadType;
-};
+import MenuBar from '@/components/StudyPage/SpreadPage/MenuBar';
+import { SpreadsType } from '@/lib/types';
 
 const spreads: SpreadsType = {
   oneCard: {
@@ -60,14 +48,7 @@ const Spread = () => {
 
   return (
     <div className="mx-auto mt-10 flex h-[43.75rem] w-[75rem] flex-col border-4">
-      <div className="flex justify-between gap-10 p-6">
-        <button onClick={() => handleSpreadChange('oneCard')}>원 카드</button>
-        <button onClick={() => handleSpreadChange('threeCard')}>쓰리 카드</button>
-        <button onClick={() => handleSpreadChange('celticCross')}>켈트 십자가</button>
-        <button onClick={() => handleSpreadChange('treeOfLife')}>생명의 나무</button>
-        <button onClick={() => handleSpreadChange('horseshoe')}>말 발굽</button>
-        <button onClick={() => handleSpreadChange('fullMoon')}>보름달</button>
-      </div>
+      <MenuBar handleSpreadChange={handleSpreadChange} />
       <div className="flex h-full w-full gap-20 border-2 p-10">
         <div className="flex w-[24rem] flex-col gap-20 border-2">
           <h1 className="text-4xl">{spreads[selectedSpread].title}</h1>
