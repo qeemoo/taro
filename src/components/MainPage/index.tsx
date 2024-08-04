@@ -25,7 +25,7 @@ const MainPage = () => {
   return (
     <section className="flex h-full items-center justify-center gap-20 bg-cover bg-no-repeat opacity-90">
       <div className="relative h-full w-[30%] gap-5 bg-black">
-        <h1 className="ml-10 mt-10 text-4xl text-white">타로 제목 뭐하냐..</h1>
+        <h1 className="ml-10 mt-10 text-4xl font-extrabold text-white">The Tarot Journey</h1>
         <Image
           className="absolute right-[-50%] top-1/2 -translate-y-1/2 transform rounded-full border-8 border-white"
           src={getImageSrc()}
@@ -34,7 +34,7 @@ const MainPage = () => {
           height={550}
         />
       </div>
-      <div className="flex h-full w-[70%] flex-col items-center justify-center gap-4">
+      <div className="flex h-full w-[70%] flex-col items-center justify-center gap-4 text-3xl font-bold">
         <Link
           className="flex h-28 w-[40rem] -translate-x-10 items-center justify-center rounded-full border-4 border-black"
           href="/play"
@@ -45,27 +45,27 @@ const MainPage = () => {
         </Link>
         <Link
           className="flex h-28 w-[40rem] items-center justify-center rounded-full border-4 border-black"
-          href="/information"
+          href="/study"
           onMouseEnter={() => setHoveredLink('info')}
           onMouseLeave={() => setHoveredLink('')}
         >
-          <div>카드정보</div>
+          <div>알아보기</div>
         </Link>
         <Link
           className="flex h-28 w-[40rem] items-center justify-center rounded-full border-4 border-black"
-          href="/tutorial"
+          href="/practice"
           onMouseEnter={() => setHoveredLink('tutorial')}
           onMouseLeave={() => setHoveredLink('')}
         >
-          <div>하는방법</div>
+          <div>연습하기</div>
         </Link>
         <Link
           className="flex h-28 w-[40rem] -translate-x-10 items-center justify-center rounded-full border-4 border-black"
-          href="/about"
+          href="/share"
           onMouseEnter={() => setHoveredLink('about')}
           onMouseLeave={() => setHoveredLink('')}
         >
-          <div>정보</div>
+          <div>더해보기</div>
         </Link>
       </div>
     </section>
