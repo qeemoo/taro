@@ -22,32 +22,32 @@ const spreads: SpreadsType = {
   oneCard: {
     title: '원 카드 스프레드',
     description: '원 카드 스프레드 설명',
-    image: '/image/main_start.jpg',
+    image: '/image/spread_one_card.jpg',
   },
   threeCard: {
     title: '쓰리 카드 스프레드',
     description: '쓰리 카드 스프레드 설명',
-    image: '/image/three_card.jpg',
+    image: '/image/spread_three_card.jpg',
   },
   celticCross: {
     title: '켈트 십자가 스프레드',
     description: '켈트 십자가 스프레드 설명',
-    image: '/image/celtic_cross.jpg',
+    image: '/image/spread_celtic_cross.jpg',
   },
   treeOfLife: {
     title: '생명의 나무 스프레드',
     description: '생명의 나무 스프레드 설명',
-    image: '/image/tree_of_life.jpg',
+    image: '/image/spread_tree_of_life.jpg',
   },
   horseshoe: {
     title: '말 발굽 스프레드',
     description: '말 발굽 스프레드 설명',
-    image: '/image/horseshoe.jpg',
+    image: '/image/spread_horseshoe.jpg',
   },
   fullMoon: {
     title: '보름달 스프레드',
     description: '보름달 스프레드 설명',
-    image: '/image/full_moon.jpg',
+    image: '/image/spread_full_moon.jpg',
   },
 };
 
@@ -74,7 +74,7 @@ const Spread = () => {
           <p>{spreads[selectedSpread].description}</p>
         </div>
         <div className="relative flex-1">
-          <Image src={spreads[selectedSpread].image} alt="이미지" fill style={{ objectFit: 'cover' }} />
+          <Image src={spreads[selectedSpread].image} alt="이미지" fill style={{ objectFit: 'contain' }} />
         </div>
       </div>
     </div>
