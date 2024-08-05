@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
+
+import MainButton from './MainButton';
 
 const MainPage = () => {
   const [hoveredLink, setHoveredLink] = useState('');
@@ -34,40 +35,7 @@ const MainPage = () => {
           height={550}
         />
       </div>
-      <div className="flex h-full w-[70%] flex-col items-center justify-center gap-4 text-3xl font-bold">
-        <Link
-          className="flex h-28 w-[40rem] -translate-x-10 items-center justify-center rounded-full border-4 border-black"
-          href="/play"
-          onMouseEnter={() => setHoveredLink('start')}
-          onMouseLeave={() => setHoveredLink('')}
-        >
-          <div>시작하기</div>
-        </Link>
-        <Link
-          className="flex h-28 w-[40rem] items-center justify-center rounded-full border-4 border-black"
-          href="/study"
-          onMouseEnter={() => setHoveredLink('info')}
-          onMouseLeave={() => setHoveredLink('')}
-        >
-          <div>알아보기</div>
-        </Link>
-        <Link
-          className="flex h-28 w-[40rem] items-center justify-center rounded-full border-4 border-black"
-          href="/practice"
-          onMouseEnter={() => setHoveredLink('tutorial')}
-          onMouseLeave={() => setHoveredLink('')}
-        >
-          <div>연습하기</div>
-        </Link>
-        <Link
-          className="flex h-28 w-[40rem] -translate-x-10 items-center justify-center rounded-full border-4 border-black"
-          href="/share"
-          onMouseEnter={() => setHoveredLink('about')}
-          onMouseLeave={() => setHoveredLink('')}
-        >
-          <div>더해보기</div>
-        </Link>
-      </div>
+      <MainButton setHoveredLink={setHoveredLink} />
     </section>
   );
 };

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -35,11 +36,18 @@ const Navigation = () => {
   const pathname = route.split('/')[1];
 
   return (
-    <nav className="border-b-4">
-      <div className="mx-10 flex items-center justify-between text-center text-2xl">
+    <nav>
+      <div className="mx-5 flex items-center justify-between text-center text-2xl">
+        <Link href="/">
+          <Image src="/image/main_logo.png" alt="logo" width={100} height={50} />
+        </Link>
         {NAVIGATION_CONTENT.map((item) => (
-          <Link key={item.id} className={`p-5 ${pathname === item.url ? 'text-red-500' : ''}`} href={item.url}>
-            {pathname === item.url ? item.activeContent : item.content}
+          <Link
+            key={item.id}
+            className={`p-5 ${pathname === item.url.split('/')[1] ? 'text-red-500' : ''}`}
+            href={item.url}
+          >
+            {pathname === item.url.split('/')[1] ? item.activeContent : item.content}
           </Link>
         ))}
         <div>로그인</div>
